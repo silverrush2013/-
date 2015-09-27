@@ -1,0 +1,16 @@
+Program SchastlivoeChislo;
+Var n,i,n1,n2: integer;
+Begin
+Writeln('Vvedite shestiznachni nomer bileta');
+Read(n);
+n1:=0;
+n2:=0;
+For i:=1 to 6 do 
+ Begin
+ if i<=3 then n1:=n1+n mod 10
+ else n2:=n2+n mod 10;
+ n:=n div 10
+ end;
+If n1=n2 then writeln('Chastlivi bilet')
+else writeln('Neschastlivi bilet');
+End.
